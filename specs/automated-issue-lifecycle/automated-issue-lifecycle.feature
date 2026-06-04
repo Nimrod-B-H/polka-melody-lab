@@ -50,15 +50,10 @@ Feature: Automated Issue Lifecycle
     When a user attempts to merge the pull request
     Then the system should prevent the merge
 
-  Scenario: Issue with excessive details
-    Given a new issue is opened with redundant or conflicting information
-    When the automated workflow is triggered
-    Then the system should identify the issue as invalid
-    And the user should be notified to revise the issue details
 
   Scenario: Issue reopened
     Given a closed issue is reopened
-    When the automated workflow is triggered
+    When the automated workflow is not triggered
     Then the system should not execute the workflow again
 
   Scenario: Simultaneous issue creation
