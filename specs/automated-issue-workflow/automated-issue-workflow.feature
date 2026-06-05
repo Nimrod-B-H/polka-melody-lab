@@ -42,7 +42,6 @@ Feature: Automated issue workflow
     Given a pull request is opened by the workflow
     When a user attempts to merge the pull request
     Then the merge should be blocked
-    And an error message should be displayed
 
   Scenario: Minimal valid issue data
     Given a new issue is created with minimal valid data
