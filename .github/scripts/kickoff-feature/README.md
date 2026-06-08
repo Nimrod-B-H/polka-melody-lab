@@ -1,8 +1,8 @@
-# Kickoff Feature Automation - Refactored Modular Structure
+# Kickoff Feature Automation - Structure
 
 ## Overview
 
-This directory contains the refactored kickoff feature automation system. The code has been split into small, focused modules following the Single Responsibility Principle.
+This directory contains the kickoff feature automation system.
 
 ## Architecture
 
@@ -202,19 +202,4 @@ Required by `config.js`:
 Optional:
 
 - `LOG_LEVEL` - Set to `DEBUG` for verbose logging (default: `INFO`)
-
-## Usage
-
-```bash
-# Run directly
-node .github/scripts/kickoff-feature/index.js
-
-# Or from GitHub Actions workflow
-- run: node .github/scripts/kickoff-feature/index.js
-  env:
-    GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-    GITHUB_REPOSITORY: ${{ github.repository }}
-    ISSUE_NUMBER: ${{ github.event.issue.number }}
-    ISSUE_TITLE: ${{ github.event.issue.title }}
-```
 
